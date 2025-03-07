@@ -92,13 +92,13 @@ function init()
     topLeftYoutubeLink = topMenu:recursiveGetChildById('youtubeIcon')
     topLeftDiscordLink = topMenu:recursiveGetChildById('discordIcon')
 
-    Keybind.new("UI", "Toggle Top Menu", "Ctrl+Shift+T", "")
-    Keybind.bind("UI", "Toggle Top Menu", {
-      {
-        type = KEY_DOWN,
-        callback = toggle,
-      }
-    })
+    -- Keybind.new("UI", "Toggle Top Menu", "Ctrl+Shift+T", "")
+    -- Keybind.bind("UI", "Toggle Top Menu", {
+      -- {
+        -- type = KEY_DOWN,
+        -- callback = toggle,
+      -- }
+    -- })
     if Services.websites then
         managerAccountsButton = modules.client_topmenu.addTopRightRegularButton('hotkeysButton', tr('Manage Account'),
             nil, openManagerAccounts)
@@ -106,6 +106,7 @@ function init()
     if g_game.isOnline() then
         online()
     end
+    topMenu:destroy()
 end
 
 function terminate()

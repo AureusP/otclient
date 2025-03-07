@@ -114,7 +114,7 @@ end
 
 local function updateLabelText()
     if enterGame:getChildById('clientComboBox') and tonumber(enterGame:getChildById('clientComboBox'):getText()) > 1080 then
-        enterGame:setText("Journey Onwards")
+        enterGame:setText("Enter Game")
         enterGame:getChildById('emailLabel'):setText("Email:")
         enterGame:getChildById('rememberEmailBox'):setText("Remember Email:")
     else
@@ -831,12 +831,17 @@ function EnterGame.setUniqueServer(host, port, protocol, windowWidth, windowHeig
     local rememberEmailBox = enterGame:getChildById('rememberEmailBox')
     rememberEmailBox:setMarginTop(5)
 
+    local autoLoginBox = enterGame:getChildById('autoLoginBox')
+    autoLoginBox:setVisible(false)
+    autoLoginBox:setHeight(0)
+    autoLoginBox:setWidth(0)
+
     if not windowWidth then
-        windowWidth = 380
+        windowWidth = 280
     end
     enterGame:setWidth(windowWidth)
     if not windowHeight then
-        windowHeight = 210
+        windowHeight = 180
     end
 
     enterGame:setHeight(windowHeight)

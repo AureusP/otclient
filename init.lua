@@ -4,24 +4,17 @@
 -- updater
 Services = {
     --updater = "http://localhost/api/updater.php", --./updater
-    --status = "http://localhost/login.php", --./client_entergame | ./client_topmenu
-    --websites = "http://localhost/?subtopic=accountmanagement", --./client_entergame "Forgot password and/or email"
+    --status = "https://origenot.online/login--.php", --./client_entergame | ./client_topmenu
+    websites = "https://origenot.online/?account/create", --./client_entergame "Forgot password and/or email"
 }
 
---[[
 Servers_init = {
-    ["http://127.0.0.1/login.php"] = {
-        ["port"] = 80,
-        ["protocol"] = 1320,
-        ["httpLogin"] = true
-    },
-    ["ip.net"] = {
-        ["port"] = 7171,
-        ["protocol"] = 860,
+    ["https://origenot.online/login.php"] = {
+        ["port"] = 443,
+        ["protocol"] = 1340,
         ["httpLogin"] = false
     },
 }
-]]
 
 g_app.setName("OTClient - Redemption");
 g_app.setCompactName("otclient");
@@ -103,7 +96,7 @@ local function loadModules()
     end
 
     -- uncomment the line below so that modules are reloaded when modified. (Note: Use only mod dev)
-    -- g_modules.enableAutoReload()
+    g_modules.enableAutoReload()
 end
 
 -- run updater, must use data.zip

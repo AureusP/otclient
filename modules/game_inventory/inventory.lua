@@ -25,7 +25,15 @@ local getSlotPanelBySlot = {
 }
 
 local function formatDuration(duration)
-    return string.format("%dm%02d", duration / 60, duration % 60)
+    local hours = math.floor(duration / 3600)  -- Calcula as horas
+    local minutes = math.floor((duration % 3600) / 60)  -- Calcula os minutos restantes
+    local seconds = duration % 60  -- Calcula os segundos restantes
+
+    if hours > 0 then
+        return string.format("%dh%02dm%02d", hours, minutes, seconds)  -- Formato: horas, minutos e segundos
+    else
+        return string.format("%dm%02d", minutes, seconds)  -- Formato: apenas minutos e segundos
+    end
 end
 
 local function stopEvent()

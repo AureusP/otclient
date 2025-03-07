@@ -17,6 +17,7 @@ Panel
     anchors.bottom: parent.bottom
     text-align: center
     text-auto-resize: true
+    visible: false
     width: 120
     padding: 2
     color: #ffffff
@@ -24,6 +25,7 @@ Panel
 
   UIParticles
     id: particles
+    visible: false
     effect: background-effect
     anchors.fill: parent
     phantom: true

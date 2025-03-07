@@ -39,6 +39,7 @@ Panel
     text-auto-resize: true
     color: #e98d02
     margin-bottom: 110
+    visible: false
     text: OTClient Redemption
     font: verdana-11px-rounded
     font-scale: 4

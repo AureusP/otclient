@@ -150,13 +150,15 @@ function init()
 
     terminalButton = modules.client_topmenu.addTopRightToggleButton('terminalButton', tr('Terminal') .. ' (Ctrl + T)',
                                                           '/images/topbuttons/terminal', toggle)
+                                                          
     Keybind.new("Misc.", "Toggle Terminal", "Ctrl+T", "")
+    if not g_game.isGM() then
     Keybind.bind("Misc.", "Toggle Terminal", {{
-        type = KEY_DOWN,
-        callback = toggle
+       type = KEY_DOWN,
+       callback = toggle
     }})
-
-
+    end
+    
     commandHistory = g_settings.getList('terminal-history')
 
     commandTextEdit = terminalWindow:getChildById('commandTextEdit')

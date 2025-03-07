@@ -27,7 +27,7 @@ EnterGameWindow
   &stayLoggedBoxEnabled: false
   &stayLoggedBoxHeight: 24
   &disableToken : false
-  size: 280 302
+  size: 230 302
   @onEnter: EnterGame.doLogin()
 
 
@@ -148,12 +148,6 @@ EnterGameWindow
       visible: true
       margin-top: 8
 
-  HorizontalSeparator
-    anchors.left: parent.left
-    anchors.right: parent.right
-    anchors.top: prev.bottom
-    margin-top: 8
-
   MenuLabel
     id: serverLabel
     !text: tr('Server')
@@ -251,10 +245,10 @@ EnterGameWindow
     @onClick: EnterGame.doLogin()
 
   QtButton
-    !text: tr('Create New Account')
+    !text: tr('Criar Conta')
     anchors.left: parent.left
     anchors.top: prev.bottom
-    margin-top: -17
+    margin-top: -18
     size: 109 20
     @onClick: g_platform.openUrl(Services.websites)
 

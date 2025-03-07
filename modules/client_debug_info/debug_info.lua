@@ -12,12 +12,12 @@ function init()
     debugInfoWindow:hide()
 
     Keybind.new("Debug", "Toggle Stats", "Ctrl+Alt+D", "")
-    Keybind.bind("Debug", "Toggle Stats", {
-      {
-        type = KEY_DOWN,
-        callback = toggle,
-      }
-    })
+    --Keybind.bind("Debug", "Toggle Stats", {
+    --  {
+    --    type = KEY_DOWN,
+    --    callback = toggle,
+    --  }
+    --})
 
     updateEvent = scheduleEvent(update, 2000)
 end
