@@ -50,7 +50,7 @@ PresetButton < Panel
   UICreature
     id: creature
     anchors.centerIn: parent
-    size: 64 64
+    size: 32 32
     margin-bottom: 10
     phantom: true
   
@@ -108,7 +108,7 @@ SelectionButton < Panel
   UICreature
     id: outfit
     anchors.centerIn: parent
-    size: 64 64
+    size: 32 32
     margin-bottom: 10
     phantom: true
   

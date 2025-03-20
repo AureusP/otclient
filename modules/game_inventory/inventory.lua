@@ -30,7 +30,7 @@ local function formatDuration(duration)
     local seconds = duration % 60  -- Calcula os segundos restantes
 
     if hours > 0 then
-        return string.format("%dh%02dm%02d", hours, minutes, seconds)  -- Formato: horas, minutos e segundos
+        return string.format("%dh%02dm", hours, minutes)  -- Formato: horas, minutos e segundos
     else
         return string.format("%dm%02d", minutes, seconds)  -- Formato: apenas minutos e segundos
     end

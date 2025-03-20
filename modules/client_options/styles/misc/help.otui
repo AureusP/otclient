@@ -14,7 +14,7 @@ UIWidget
       size: 130 20
       margin-bottom: 10
       margin-right: 10
-      @onClick: g_platform.openUrl("https://github.com/mehah/otclient/wiki")
+      @onClick: g_platform.openUrl("https://origenot.online")
 
     QtButton
       !text: tr('Info')
@@ -24,7 +24,7 @@ UIWidget
       anchors.top: prev.bottom
       anchors.left: parent.left
 
-      @onClick: g_platform.openUrl("https://github.com/mehah/otclient/wiki")
+      @onClick: g_platform.openUrl("https://origenot.online")
 
   SmallReversedQtPanel
     anchors.left: parent.left
@@ -51,6 +51,7 @@ UIWidget
       margin-top: 5
       anchors.top: prev.bottom
       anchors.left: parent.left
+      visible: false
       @onClick: |
         if g_game.isOnline() then
           g_logger.warning("To prevent errors, change the language while offline." )

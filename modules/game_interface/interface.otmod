@@ -13,7 +13,6 @@ Module
     - game_healthinfo
     - game_inventory
     - game_mainpanel
-    - game_prey
     - game_imbuing
     - game_imbuementtracker
     - game_hotkeys
@@ -33,7 +32,6 @@ Module
     - game_playerdeath
     - game_playermount
     - game_ruleviolation
-    - game_market
     - game_spelllist
     - game_cooldown
     - game_modaldialog

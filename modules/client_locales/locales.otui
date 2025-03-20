@@ -13,6 +13,7 @@ UIWindow
   background-color: #000000
   opacity: 0.90
   clipping: true
+  visible: false
   anchors.fill: parent
 
   LocalesMainLabel

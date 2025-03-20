@@ -125,15 +125,24 @@ function ItemsDatabase.setCharges(widget, item, style)
     end
 end
 
-
 function ItemsDatabase.setDuration(widget, item, style)
     if not g_game.getFeature(GameThingClock) or not widget then
         return
     end
 
     if item and item:getDurationTime() > 0 then
-            local durationTimeLeft = item:getDurationTime()
-            widget.duration:setText(string.format("%dm%02d", durationTimeLeft / 60, durationTimeLeft % 60))
+        local durationTimeLeft = item:getDurationTime()
+
+        -- Calcular horas e minutos
+        local hours = math.floor(durationTimeLeft / 3600)  -- 1 hora = 3600 segundos
+        local minutes = math.floor((durationTimeLeft % 3600) / 60)  -- Resto de minutos após as horas
+
+        -- Se o tempo for maior que 60 minutos, mostrar no formato h:mm
+        if hours > 0 then
+            widget.duration:setText(string.format("%dh%02dm", hours, minutes))
+        else
+            widget.duration:setText(string.format("%dm%02d", minutes, durationTimeLeft % 60))
+        end
     else
         widget.duration:setText("")
     end
